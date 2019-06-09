@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  background-color: #f7f7f7 !important;
+}
+
+.navbar {
+  padding: .8rem;
+  background-color: #5bc0de !important;
+}
+
+.navbar-nav li {
+  padding-right: 20px;
+}
+
+.nav-link {
+  font-size: 1.1em !important;
+}
+
+.btn-primary {
+  background-color: #6648b1;
+  border: 1px solid #563d7c;
+}
+
+.padding {
+  padding-bottom: 2rem;
+}
+
+.header-text {
+  font-size: 200%;
+  font-weight: 500;
+  padding-top: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.header-text2 {
+  font-size: 150%;
+  font-weight: 500;
+  padding-top: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.target {
+  width: 100%;
+  margin-bottom: 2rem;
+  background-color: #EAEAEA;
+}
+
+.gif {
+  max-width:100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.jpeg {
+  max-width: 100%;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gps {
+  padding-top: 2rem;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #5bc0de;
+  text-align: center;
+  padding-top: .5rem;
+}
+
+#button1 {
+  background-color: #EAEAEA;
+}
+#button2 {
+  background-color: #EAEAEA;
+}
+#button3 {
+  background-color: #EAEAEA;
+}
+#button4 {
+  background-color: #EAEAEA;
+}
+
+/*--- Bootstrap Padding --*/
+[class*="col-"] {
+    padding: 1rem;
+}
+
+
+
+
+
+
+
+

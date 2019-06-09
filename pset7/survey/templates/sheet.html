@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
+    <h1 class="mb-3">Sheet</h1>
+
+    <table id="table" class="table table-hover">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>House</th>
+                <th>Position</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <!-- loops through the players from csv file -->
+            {% for player in players %}
+                <tr>
+                    <td></td><td>{{ player[0] }}</td><td>{{ player[1] }}</td><td>{{ player[2] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <script>
+       
+    </script>
+
+{% endblock %}

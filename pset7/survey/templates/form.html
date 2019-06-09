@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
+    <h1 class="mb-3">Form</h1>
+
+    <!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
+    <form action="/form" method="post" name="survey" onsubmit="return validateForm()">
+
+        <!-- Text Box -->
+
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="name" placeholder="Name" type="text">
+        </div>
+
+        <!-- Dropdown Menu-->
+
+        <div class="form-group">
+            <select class="form-control" name="house">
+                <option selected disabled>House</option>
+                <option>Gryfinndor</option>
+                <option>Hufflepuff</option>
+                <option>Ravenclaw</option>
+                <option>Slytherin</option>
+            </select>
+            <p
+        </div>
+
+        <!-- Radio Buttons -->
+
+        <div class="form-group">
+
+                <div class="form-check">
+                    <input class="form-check-input" id="Beater" name="position" type="radio" value="Beater">
+                    <label class="form-check-label" for="Beater">
+                        Beater
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" id="Chaser" name="position" type="radio" value="Chaser">
+                    <label class="form-check-label" for="Chaser">
+                        Chaser
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" id="Keeper" name="position" type="radio" value="Keeper">
+                    <label class="form-check-label" for="Keeper">
+                        Keeper
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" id="Seeker" name="position" type="radio" value="Seeker">
+                    <label class="form-check-label" for="Seeker">
+                        Seeker
+                    </label>
+                </div>
+
+
+
+
+        <!-- http://getbootstrap.com/docs/4.1/components/buttons/ -->
+        <button class="btn btn-primary" type="submit">Submit</button>
+
+    </form>
+
+    <script>
+
+        function validateForm() {
+
+            var name = document.forms["survey"]["name"].value;
+            var house = document.forms["survey"]["house"].value;
+            var position = document.forms["survey"]["position"].value;
+
+            if (name == "") {
+                document.getElementById("noName").innerHTML = "Please enter your name";
+            }
+            else {
+                document.getElementById("noName").innerHTML = "";
+            }
+            if (house == "") {
+                document.getElementById("noHouse").innerHTML = "Please select your house";
+            }
+            else {
+                document.getElementById("noHouse").innerHTML = "";
+            }
+            if (position == "") {
+                document.getElementById("noPosition").innerHTML = "Please select your position";
+            }
+            else {
+                document.getElementById("noPosition").innerHTML = "";
+            }
+
+            if (name == "" || house == "" || house == "House" | position == "") {
+                return false;
+            }
+        }
+
+    </script>
+
+{% endblock %}
